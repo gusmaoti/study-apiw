@@ -1,4 +1,4 @@
-package com.github.acnaweb.study_apiw;
+package com.github.gusmaoti.study_apiw;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

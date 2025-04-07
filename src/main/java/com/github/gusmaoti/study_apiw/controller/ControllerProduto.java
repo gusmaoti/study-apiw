@@ -1,4 +1,6 @@
-package com.github.acnaweb.study_apiw.controller;
+package com.github.gusmaoti.study_apiw.controller;
+
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -10,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.github.acnaweb.study_apiw.model.Produto;
-import com.github.acnaweb.study_apiw.service.ProdutoService;
+import com.github.gusmaoti.study_apiw.model.Produto;
+import com.github.gusmaoti.study_apiw.service.ProdutoService;
 
 @RestController
 @RequestMapping("produtos")
@@ -32,12 +34,15 @@ public class ControllerProduto {
         Produto produto = new Produto();
         return  ResponseEntity.status(200).body(produto);
     }
-
+    
     @GetMapping
-    public ResponseEntity<Produto> find() {
+    public ResponseEntity<List<Produto>> findAll(){
+        return ResponseEntity.ok(produtoService.findAll());
+    }
 
-        Produto produto = new Produto();
-
+    @GetMapping("{id}")
+    public ResponseEntity<Produto> findById(long id) {
+        Produto produto = produtoService.fingById(id);
         return ResponseEntity.status(200).body(produto);
     }
 

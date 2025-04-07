@@ -1,4 +1,4 @@
-package com.github.acnaweb.study_apiw;
+package com.github.gusmaoti.study_apiw;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

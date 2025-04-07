@@ -1,4 +1,4 @@
-package com.github.acnaweb.study_apiw.model;
+package com.github.gusmaoti.study_apiw.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
