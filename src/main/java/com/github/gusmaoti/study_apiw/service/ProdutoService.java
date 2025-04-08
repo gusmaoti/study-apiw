@@ -23,7 +23,7 @@ public class ProdutoService {
         return produtoRepository.findAll();
     }
 
-    public Produto fingById(Long id){
+    public Produto findById(Long id){
         Optional<Produto> opt = produtoRepository.findById(id);
         if (opt.isPresent()) {
             return opt.get();

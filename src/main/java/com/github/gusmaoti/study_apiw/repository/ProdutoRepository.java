@@ -7,5 +7,4 @@ import com.github.gusmaoti.study_apiw.model.Produto;
 
 @Repository
 public interface ProdutoRepository extends JpaRepository<Produto, Long>{
-
 }
